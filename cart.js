@@ -63,11 +63,11 @@ function renderCart() {
         <div class="cart-item__image ${bgClass}"></div>
         <div class="cart-item__details">
           <div class="cart-item__name">${item.name}</div>
-          <div class="cart-item__meta">الوزن ${item.weight} ${goldWeightText} &bull; ${item.karat} ${sizeText} &bull; الكمية: ${item.qty}</div>
+          <div class="cart-item__meta">الوزن ${item.weight} ${goldWeightText} &bull; ${item.karat} ${sizeText} &bull; العدد: ${item.qty}</div>
           <div class="cart-item__pricing">
             <strong>السعر الإجمالي: ${formatKWD(itemTotal)}</strong>
           </div>
-          <button class="cart-item__remove" onclick="removeFromCart(${index})">إزالة</button>
+          <button class="cart-item__remove" onclick="removeFromCart(${index})">شيلها</button>
         </div>
       </div>
     `;
@@ -157,7 +157,7 @@ function handleCivilIdUpload(input) {
 
     const changeText = document.createElement('span');
     changeText.className = 'upload-change';
-    changeText.textContent = 'تغيير الصور';
+    changeText.textContent = 'غيّر الصور';
     preview.appendChild(changeText);
   }
 }
@@ -230,7 +230,7 @@ function handleCheckout() {
 
   const btn = document.getElementById('checkoutBtn');
   if (btn) {
-    btn.textContent = 'جار تحويل الطلب...';
+    btn.textContent = 'دقيقة... قاعدين نجهز طلبك';
     btn.style.opacity = '0.7';
     btn.style.pointerEvents = 'none';
   }
@@ -244,11 +244,11 @@ function handleCheckout() {
       'عدد الصور المرفوعة: ' + civilData.imagesCount + '\n' +
       'الموافقة: نعم\n\n' +
       'إجمالي السلة: ' + formatKWD(cart.reduce((sum, item) => sum + item.price * item.qty, 0)) + '\n\n' +
-      'في متجر فعلي سيتم الانتقال إلى صفحة الدفع بعد حفظ هذه البيانات.'
+      'بالمتجر الفعلي راح نوديك صفحة الدفع بعد ما نحفظ هالبيانات.'
     );
 
     if (btn) {
-      btn.textContent = 'إتمام الطلب';
+      btn.textContent = 'كمّل الطلب';
       btn.style.opacity = '1';
       btn.style.pointerEvents = 'auto';
     }
