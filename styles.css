@@ -18,9 +18,9 @@
   --color-border: #E8E0D4;
   --color-white: #FFFFFF;
 
-  --font-heading: 'Playfair Display', Georgia, serif;
-  --font-accent: 'Cormorant Garamond', Georgia, serif;
-  --font-body: 'Montserrat', -apple-system, sans-serif;
+  --font-heading: 'Cairo', 'Noto Kufi Arabic', sans-serif;
+  --font-accent: 'Noto Kufi Arabic', 'Cairo', sans-serif;
+  --font-body: 'Cairo', -apple-system, sans-serif;
 
   --header-height: 72px;
   --container-width: 1280px;
@@ -38,6 +38,7 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  direction: rtl;
 }
 
 body {
@@ -47,6 +48,7 @@ body {
   background: var(--color-white);
   line-height: 1.6;
   overflow-x: hidden;
+  text-align: right;
 }
 
 a {
@@ -180,7 +182,7 @@ img {
   font-family: var(--font-heading);
   font-size: 18px;
   font-weight: 600;
-  letter-spacing: 3px;
+  letter-spacing: 0;
   color: var(--color-charcoal);
   line-height: 1.1;
 }
@@ -188,9 +190,8 @@ img {
 .logo-tagline {
   font-family: var(--font-body);
   font-size: 9px;
-  letter-spacing: 4px;
+  letter-spacing: 1px;
   color: var(--color-gold-dark);
-  text-transform: uppercase;
   font-weight: 500;
 }
 
@@ -298,12 +299,12 @@ img {
 
 .mobile-menu__panel {
   position: absolute;
-  left: 0;
+  right: 0;
   top: 0;
   width: 320px;
   height: 100%;
   background: var(--color-white);
-  transform: translateX(-100%);
+  transform: translateX(100%);
   transition: transform 0.4s var(--ease-luxury);
   padding: 32px;
 }
@@ -315,7 +316,7 @@ img {
 .mobile-menu__close {
   position: absolute;
   top: 20px;
-  right: 20px;
+  left: 20px;
   background: none;
   border: none;
   font-size: 28px;
@@ -640,6 +641,7 @@ img {
   padding: 28px;
   color: var(--color-white);
   z-index: 2;
+  text-align: right;
 }
 
 .collection-card__count {
@@ -751,6 +753,7 @@ img {
 
 .product-card__info {
   padding: 0 4px;
+  text-align: right;
 }
 
 .product-card__info h3 {
@@ -913,6 +916,7 @@ img {
   margin-bottom: 10px;
   transition: color 0.3s;
   line-height: 1.6;
+  text-align: right;
 }
 
 .footer__links a:hover {
@@ -1083,6 +1087,7 @@ img {
   font-size: 11px;
   color: var(--color-text-light);
   line-height: 1.8;
+  text-align: right;
 }
 
 .cart-item__pricing strong {
@@ -1324,6 +1329,7 @@ img {
   font-size: 11px;
   line-height: 1.5;
   color: var(--color-text);
+  text-align: right;
 }
 
 .checkbox-label input[type="checkbox"] {
@@ -1565,6 +1571,32 @@ img {
   color: var(--color-burgundy);
   font-weight: 600;
   margin-bottom: 20px;
+}
+
+.product-price-summary {
+  background: var(--color-ivory);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  padding: 18px 24px;
+  margin-bottom: 28px;
+}
+
+.product-price-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 0;
+  font-size: 13px;
+}
+
+.product-price-summary__row + .product-price-summary__row {
+  border-top: 1px solid var(--color-border);
+}
+
+.product-price-summary__row strong {
+  color: var(--color-charcoal);
+  font-weight: 700;
 }
 
 /* Collapsible Pricing Breakdown */
@@ -1830,6 +1862,7 @@ img {
   line-height: 1.8;
   color: var(--color-text);
   margin-bottom: 16px;
+  text-align: right;
 }
 
 .product-features {

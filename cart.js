@@ -1,6 +1,6 @@
 /* ========================================
    KANCHWALA JEWELLERS — Cart System
-   Cart drawer, civil ID gate with image upload, checkout
+   Arabic cart drawer, civil ID gate, checkout demo
    ======================================== */
 
 let cart = JSON.parse(localStorage.getItem('kanchwala_cart') || '[]');
@@ -19,7 +19,7 @@ function updateCartCount() {
 }
 
 function formatKWD(amount) {
-  return 'KWD ' + amount.toFixed(3);
+  return amount.toFixed(3) + ' د.ك';
 }
 
 const colorClasses = [
@@ -55,20 +55,19 @@ function renderCart() {
     const itemTotal = item.price * item.qty;
     subtotal += itemTotal;
     const bgClass = item.colorClass || colorClasses[index % colorClasses.length];
+    const sizeText = item.size ? `&bull; المقاس ${item.size}` : '';
+    const goldWeightText = item.goldWeight ? `&bull; وزن الذهب ${item.goldWeight}` : '';
 
     html += `
       <div class="cart-item">
         <div class="cart-item__image ${bgClass}"></div>
         <div class="cart-item__details">
           <div class="cart-item__name">${item.name}</div>
-          <div class="cart-item__meta">${item.weight} &bull; ${item.karat} &bull; Size ${item.size} &bull; Qty: ${item.qty}</div>
+          <div class="cart-item__meta">الوزن ${item.weight} ${goldWeightText} &bull; ${item.karat} ${sizeText} &bull; الكمية: ${item.qty}</div>
           <div class="cart-item__pricing">
-            Gold Value: ${formatKWD(item.goldValue * item.qty)}<br>
-            Making Charge: ${formatKWD(item.makingCharge * item.qty)}<br>
-            ${item.stoneCharge > 0 ? 'Stone Setting: ' + formatKWD(item.stoneCharge * item.qty) + '<br>' : ''}
-            <strong>${formatKWD(itemTotal)}</strong>
+            <strong>السعر الإجمالي: ${formatKWD(itemTotal)}</strong>
           </div>
-          <button class="cart-item__remove" onclick="removeFromCart(${index})">Remove</button>
+          <button class="cart-item__remove" onclick="removeFromCart(${index})">إزالة</button>
         </div>
       </div>
     `;
@@ -158,7 +157,7 @@ function handleCivilIdUpload(input) {
 
     const changeText = document.createElement('span');
     changeText.className = 'upload-change';
-    changeText.textContent = 'Change';
+    changeText.textContent = 'تغيير الصور';
     preview.appendChild(changeText);
   }
 }
@@ -229,55 +228,27 @@ function handleCheckout() {
     consentGiven: true
   };
 
-  /*
-    Shopify Implementation:
-
-    1. Text fields → cart attributes via /cart/update.js:
-    fetch('/cart/update.js', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        attributes: {
-          'Civil ID Name': civilData.name,
-          'Civil ID Number': civilData.number,
-          'Phone Number': civilData.phone,
-          'Civil ID Consent': 'Yes'
-        }
-      })
-    });
-
-    2. Civil ID images → upload via Shopify file API or
-       store as base64 in cart note, or use a third-party
-       file upload service (e.g., Uploadcare, Cloudinary)
-       and store the URL in cart attributes.
-
-    3. Validate in checkout.liquid or via Shopify Scripts/Flow:
-       Block checkout if attributes missing.
-
-    4. Then redirect: window.location.href = '/checkout';
-  */
-
   const btn = document.getElementById('checkoutBtn');
   if (btn) {
-    btn.textContent = 'Redirecting to Checkout...';
+    btn.textContent = 'جار تحويل الطلب...';
     btn.style.opacity = '0.7';
     btn.style.pointerEvents = 'none';
   }
 
   setTimeout(() => {
     alert(
-      'Demo: Checkout would proceed with:\n\n' +
-      'Civil ID Name: ' + civilData.name + '\n' +
-      'Civil ID Number: ' + civilData.number + '\n' +
-      'Phone: ' + civilData.phone + '\n' +
-      'Civil ID Images: ' + civilData.imagesCount + ' uploaded\n' +
-      'Consent: Given\n\n' +
-      'Cart Total: ' + formatKWD(cart.reduce((s, i) => s + i.price * i.qty, 0)) + '\n\n' +
-      'In Shopify, this redirects to /checkout with cart attributes set.'
+      'نسخة تجريبية:\n\n' +
+      'اسم البطاقة المدنية: ' + civilData.name + '\n' +
+      'رقم البطاقة المدنية: ' + civilData.number + '\n' +
+      'رقم الهاتف: ' + civilData.phone + '\n' +
+      'عدد الصور المرفوعة: ' + civilData.imagesCount + '\n' +
+      'الموافقة: نعم\n\n' +
+      'إجمالي السلة: ' + formatKWD(cart.reduce((sum, item) => sum + item.price * item.qty, 0)) + '\n\n' +
+      'في متجر فعلي سيتم الانتقال إلى صفحة الدفع بعد حفظ هذه البيانات.'
     );
 
     if (btn) {
-      btn.textContent = 'Proceed to Checkout';
+      btn.textContent = 'إتمام الطلب';
       btn.style.opacity = '1';
       btn.style.pointerEvents = 'auto';
     }

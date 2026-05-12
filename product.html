@@ -1,65 +1,64 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Royal Solitaire Ring | Kanchwala Jewellers</title>
+  <title>خاتم السوليتير الملكي | مجوهرات كانشوالا</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Scrollable Announcement Bar -->
   <div class="announcement-bar">
     <div class="announcement-bar__track">
-      <div class="announcement-bar__slide">Free Delivery Across Kuwait</div>
+      <div class="announcement-bar__slide">توصيل مجاني إلى جميع مناطق الكويت</div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">Live Gold Rate: <strong>KWD 22.450/g</strong></div>
+      <div class="announcement-bar__slide">سعر الذهب اليوم: <strong>22.450 د.ك / غرام</strong></div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">Trusted Since 1962</div>
+      <div class="announcement-bar__slide">ثقة ممتدة منذ عام 1962</div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">916 BIS Hallmarked Gold</div>
+      <div class="announcement-bar__slide">ذهب عيار 916 معتمد</div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">Free Delivery Across Kuwait</div>
+      <div class="announcement-bar__slide">توصيل مجاني إلى جميع مناطق الكويت</div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">Live Gold Rate: <strong>KWD 22.450/g</strong></div>
+      <div class="announcement-bar__slide">سعر الذهب اليوم: <strong>22.450 د.ك / غرام</strong></div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">Trusted Since 1962</div>
+      <div class="announcement-bar__slide">ثقة ممتدة منذ عام 1962</div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">916 BIS Hallmarked Gold</div>
+      <div class="announcement-bar__slide">ذهب عيار 916 معتمد</div>
     </div>
   </div>
 
-  <!-- Header -->
   <header class="header">
     <div class="header__container">
-      <button class="header__menu-toggle" aria-label="Menu" onclick="toggleMobileMenu()">
+      <button class="header__menu-toggle" aria-label="القائمة" onclick="toggleMobileMenu()">
         <span></span><span></span><span></span>
       </button>
       <a href="index.html" class="header__logo">
-        <div class="logo-mark">K</div>
+        <div class="logo-mark">ك</div>
         <div class="logo-text">
-          <span class="logo-name">KANCHWALA</span>
-          <span class="logo-tagline">JEWELLERS</span>
+          <span class="logo-name">كانشوالا</span>
+          <span class="logo-tagline">للمجوهرات</span>
         </div>
       </a>
       <nav class="header__nav">
-        <a href="index.html">Home</a>
-        <a href="collection.html">Collections</a>
-        <a href="product.html" class="active">Rings</a>
-        <a href="#">Necklaces</a>
-        <a href="#">Bangles</a>
-        <a href="#">Earrings</a>
+        <a href="index.html">الرئيسية</a>
+        <a href="collection.html">المجموعات</a>
+        <a href="product.html" class="active">الخواتم</a>
+        <a href="#">القلائد</a>
+        <a href="#">الأساور</a>
+        <a href="#">الأقراط</a>
       </nav>
       <div class="header__actions">
-        <button class="header__icon" aria-label="Search">
+        <button class="header__icon" aria-label="بحث">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         </button>
-        <button class="header__icon" aria-label="Account">
+        <button class="header__icon" aria-label="الحساب">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </button>
-        <button class="header__icon header__cart-btn" aria-label="Cart" onclick="openCart()">
+        <button class="header__icon header__cart-btn" aria-label="السلة" onclick="openCart()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           <span class="cart-count" id="cartCount">0</span>
         </button>
@@ -67,39 +66,35 @@
     </div>
   </header>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu__overlay" onclick="toggleMobileMenu()"></div>
     <div class="mobile-menu__panel">
-      <button class="mobile-menu__close" onclick="toggleMobileMenu()">&times;</button>
+      <button class="mobile-menu__close" aria-label="إغلاق" onclick="toggleMobileMenu()">&times;</button>
       <nav class="mobile-menu__nav">
-        <a href="index.html">Home</a>
-        <a href="collection.html">Collections</a>
-        <a href="product.html">Rings</a>
-        <a href="#">Necklaces</a>
-        <a href="#">Bangles</a>
-        <a href="#">Earrings</a>
+        <a href="index.html">الرئيسية</a>
+        <a href="collection.html">المجموعات</a>
+        <a href="product.html">الخواتم</a>
+        <a href="#">القلائد</a>
+        <a href="#">الأساور</a>
+        <a href="#">الأقراط</a>
       </nav>
     </div>
   </div>
 
-  <!-- Breadcrumb -->
   <div style="background: var(--color-ivory); border-bottom: 1px solid var(--color-border);">
     <div class="container">
-      <div class="breadcrumb" style="padding: 14px 0; font-size: 11px; letter-spacing: 1px; text-transform: uppercase; color: var(--color-text-light);">
-        <a href="index.html" style="color: var(--color-gold-dark);">Home</a> &nbsp;/&nbsp;
-        <a href="collection.html" style="color: var(--color-gold-dark);">Rings</a> &nbsp;/&nbsp;
-        Royal Solitaire Ring
+      <div class="breadcrumb" style="padding: 14px 0; font-size: 11px; color: var(--color-text-light);">
+        <a href="index.html" style="color: var(--color-gold-dark);">الرئيسية</a> &nbsp;/&nbsp;
+        <a href="collection.html" style="color: var(--color-gold-dark);">الخواتم</a> &nbsp;/&nbsp;
+        خاتم السوليتير الملكي
       </div>
     </div>
   </div>
 
-  <!-- Product Page -->
   <section class="product-page">
     <div class="container">
       <div class="product-layout">
 
-        <!-- Gallery -->
         <div class="product-gallery">
           <div class="product-gallery__main product-gallery__main--hero" id="mainGallery">
             <div class="product-gallery__jewel-icon">
@@ -119,78 +114,31 @@
           </div>
         </div>
 
-        <!-- Product Info -->
         <div class="product-info">
-          <div class="product-info__brand">Kanchwala Jewellers</div>
-          <h1 class="product-info__title">Royal Solitaire Ring</h1>
-          <div class="product-info__sku">SKU: KJ-RNG-2024-0847 &nbsp;&bull;&nbsp; 22K Hallmarked Gold</div>
+          <div class="product-info__brand">مجوهرات كانشوالا</div>
+          <h1 class="product-info__title">خاتم السوليتير الملكي</h1>
+          <div class="product-info__sku">رمز المنتج: KJ-RNG-2024-0847 &nbsp;&bull;&nbsp; ذهب مختوم عيار 22</div>
 
-          <!-- Big Price -->
-          <div class="product-info__price-main">KWD 285.000</div>
+          <div class="product-info__price-main">285.000 د.ك</div>
 
-          <!-- Collapsible Pricing Breakdown -->
-          <div class="pricing-breakdown" id="pricingBreakdown">
-            <button class="pricing-breakdown__toggle" onclick="togglePricing()">
-              <div class="pricing-breakdown__toggle-left">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-                View Price Breakdown
-              </div>
-              <div class="pricing-breakdown__toggle-arrow">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-              </div>
-            </button>
-            <div class="pricing-breakdown__body">
-              <div class="pricing-breakdown__inner">
-                <div class="pricing-breakdown__row">
-                  <div class="pricing-breakdown__label">
-                    Gold Weight
-                    <small>Net weight of 22K gold</small>
-                  </div>
-                  <div class="pricing-breakdown__value">8.200 grams</div>
-                </div>
-                <div class="pricing-breakdown__row">
-                  <div class="pricing-breakdown__label">
-                    Gold Rate (22K)
-                    <small>Today's rate per gram</small>
-                  </div>
-                  <div class="pricing-breakdown__value">KWD 22.450/g</div>
-                </div>
-                <div class="pricing-breakdown__row">
-                  <div class="pricing-breakdown__label">
-                    Gold Value
-                    <small>8.200g &times; KWD 22.450</small>
-                  </div>
-                  <div class="pricing-breakdown__value">KWD 184.090</div>
-                </div>
-                <div class="pricing-breakdown__row">
-                  <div class="pricing-breakdown__label">
-                    Making Charge
-                    <small>Handcraft &amp; design premium</small>
-                  </div>
-                  <div class="pricing-breakdown__value">KWD 85.000</div>
-                </div>
-                <div class="pricing-breakdown__row">
-                  <div class="pricing-breakdown__label">
-                    Stone Setting
-                    <small>Solitaire stone &amp; micro-setting</small>
-                  </div>
-                  <div class="pricing-breakdown__value">KWD 15.910</div>
-                </div>
-                <div class="pricing-breakdown__total">
-                  <div class="pricing-breakdown__total-label">Total Price</div>
-                  <div class="pricing-breakdown__total-value">KWD 285.000</div>
-                </div>
-                <div class="pricing-breakdown__rate-note">
-                  Gold rate updated daily at 10:00 AM Kuwait time. Final price may vary.
-                </div>
-              </div>
+          <div class="product-price-summary">
+            <div class="product-price-summary__row">
+              <span>الوزن الإجمالي</span>
+              <strong>8.200 غرام</strong>
+            </div>
+            <div class="product-price-summary__row">
+              <span>وزن الذهب</span>
+              <strong>7.860 غرام</strong>
+            </div>
+            <div class="product-price-summary__row">
+              <span>العيار</span>
+              <strong>ذهب 22 قيراط</strong>
             </div>
           </div>
 
-          <!-- Size Selector -->
           <div class="product-options">
             <div class="product-option">
-              <div class="product-option__label">Ring Size</div>
+              <div class="product-option__label">مقاس الخاتم</div>
               <div class="size-selector">
                 <button class="size-btn" onclick="selectSize(this)">5</button>
                 <button class="size-btn" onclick="selectSize(this)">6</button>
@@ -204,7 +152,6 @@
             </div>
           </div>
 
-          <!-- Add to Cart -->
           <div class="product-actions">
             <div class="quantity-selector">
               <button onclick="changeQty(-1)">−</button>
@@ -213,24 +160,23 @@
             </div>
             <button class="btn--add-to-cart" onclick="addProductToCart()">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-              Add to Bag
+              أضف إلى السلة
             </button>
           </div>
 
-          <!-- Description -->
           <div class="product-description">
-            <h3 class="product-description__title">About This Piece</h3>
-            <p>This Royal Solitaire Ring is a masterpiece of traditional Kuwaiti goldsmithing, handcrafted by our senior artisans with over 30 years of experience. The ring features a brilliant solitaire stone set in a cathedral mounting, with delicate milgrain detailing along the band.</p>
-            <p>Each ring undergoes rigorous quality checks and carries the BIS 916 hallmark, guaranteeing 22-karat purity. The making charge reflects the hours of skilled handwork — from wax carving to final polish.</p>
+            <h3 class="product-description__title">عن هذه القطعة</h3>
+            <p>خاتم السوليتير الملكي قطعة مصاغة بإتقان مستوحاة من أسلوب الصياغة الكويتي التقليدي، مع لمسة عصرية تبرز الحجر المركزي وتفاصيل الحواف الدقيقة.</p>
+            <p>تم تنفيذ الخاتم بعناية على يد حرفيين ذوي خبرة طويلة، مع فحص الجودة قبل العرض لضمان نقاء الذهب ولمعان التشطيب النهائي.</p>
             <ul class="product-features">
-              <li><span>Gold Purity</span> <strong>22K (916 Hallmarked)</strong></li>
-              <li><span>Gross Weight</span> <strong>8.200 grams</strong></li>
-              <li><span>Type</span> <strong>Solitaire Ring</strong></li>
-              <li><span>Stone</span> <strong>Lab-Grown Diamond, 0.50ct</strong></li>
-              <li><span>Finish</span> <strong>High Polish + Milgrain</strong></li>
-              <li><span>Occasion</span> <strong>Engagement / Daily Wear</strong></li>
-              <li><span>Certification</span> <strong>BIS Hallmark Certificate</strong></li>
-              <li><span>Warranty</span> <strong>Lifetime Manufacturing</strong></li>
+              <li><span>نقاوة الذهب</span> <strong>22 قيراط (ختم 916)</strong></li>
+              <li><span>الوزن الإجمالي</span> <strong>8.200 غرام</strong></li>
+              <li><span>وزن الذهب</span> <strong>7.860 غرام</strong></li>
+              <li><span>النوع</span> <strong>خاتم سوليتير</strong></li>
+              <li><span>الحجر</span> <strong>ألماس مصنع 0.50 قيراط</strong></li>
+              <li><span>التشطيب</span> <strong>لمعة عالية مع تفاصيل دقيقة</strong></li>
+              <li><span>الاستخدام</span> <strong>مناسبات وخطوبة ولبس يومي</strong></li>
+              <li><span>الضمان</span> <strong>ضمان تصنيع</strong></li>
             </ul>
           </div>
         </div>
@@ -238,89 +184,88 @@
     </div>
   </section>
 
-  <!-- You May Also Like — Horizontal Carousel -->
   <section class="section carousel-section" style="background: var(--color-ivory);">
     <div class="container">
       <div class="section__header">
-        <span class="section__label">Complete Your Look</span>
-        <h2 class="section__title">You May Also Like</h2>
+        <span class="section__label">أكمل إطلالتك</span>
+        <h2 class="section__title">قد يعجبك أيضا</h2>
       </div>
       <div class="carousel-wrapper">
         <div class="carousel-track" id="carouselTrack">
           <a href="product.html" class="product-card">
             <div class="product-card__image product-card__image--gold-2"></div>
             <div class="product-card__info">
-              <h3>Twisted Vine Band</h3>
-              <div class="product-card__meta"><span class="product-card__weight">5.4g &bull; 22K Gold</span></div>
-              <div class="product-card__price">KWD 182.000</div>
+              <h3>خاتم الضفيرة النباتية</h3>
+              <div class="product-card__meta"><span class="product-card__weight">5.4 غرام - ذهب 22 قيراط</span></div>
+              <div class="product-card__price">182.000 د.ك</div>
             </div>
           </a>
           <a href="product.html" class="product-card">
             <div class="product-card__image product-card__image--gold-3"></div>
             <div class="product-card__info">
-              <h3>Matching Pendant</h3>
-              <div class="product-card__meta"><span class="product-card__weight">6.8g &bull; 22K Gold</span></div>
-              <div class="product-card__price">KWD 238.000</div>
+              <h3>تعليقة متناسقة</h3>
+              <div class="product-card__meta"><span class="product-card__weight">6.8 غرام - ذهب 22 قيراط</span></div>
+              <div class="product-card__price">238.000 د.ك</div>
             </div>
           </a>
           <a href="product.html" class="product-card">
             <div class="product-card__image product-card__image--gold-4">
-              <div class="product-card__badge">Bestseller</div>
+              <div class="product-card__badge">الأكثر طلبا</div>
             </div>
             <div class="product-card__info">
-              <h3>Solitaire Studs</h3>
-              <div class="product-card__meta"><span class="product-card__weight">3.2g &bull; 22K Gold</span></div>
-              <div class="product-card__price">KWD 145.000</div>
+              <h3>أقراط سوليتير</h3>
+              <div class="product-card__meta"><span class="product-card__weight">3.2 غرام - ذهب 22 قيراط</span></div>
+              <div class="product-card__price">145.000 د.ك</div>
             </div>
           </a>
           <a href="product.html" class="product-card">
             <div class="product-card__image product-card__image--gold-5"></div>
             <div class="product-card__info">
-              <h3>Heritage Cocktail Ring</h3>
-              <div class="product-card__meta"><span class="product-card__weight">12.6g &bull; 22K Gold</span></div>
-              <div class="product-card__price">KWD 425.000</div>
+              <h3>خاتم التراث الفاخر</h3>
+              <div class="product-card__meta"><span class="product-card__weight">12.6 غرام - ذهب 22 قيراط</span></div>
+              <div class="product-card__price">425.000 د.ك</div>
             </div>
           </a>
           <a href="product.html" class="product-card">
             <div class="product-card__image product-card__image--gold-6"></div>
             <div class="product-card__info">
-              <h3>Filigree Statement Ring</h3>
-              <div class="product-card__meta"><span class="product-card__weight">15.8g &bull; 22K Gold</span></div>
-              <div class="product-card__price">KWD 540.000</div>
+              <h3>خاتم فيليغري بارز</h3>
+              <div class="product-card__meta"><span class="product-card__weight">15.8 غرام - ذهب 22 قيراط</span></div>
+              <div class="product-card__price">540.000 د.ك</div>
             </div>
           </a>
           <a href="product.html" class="product-card">
             <div class="product-card__image product-card__image--gold-7">
-              <div class="product-card__badge">New</div>
+              <div class="product-card__badge">جديد</div>
             </div>
             <div class="product-card__info">
-              <h3>Polki Diamond Ring</h3>
-              <div class="product-card__meta"><span class="product-card__weight">9.5g &bull; 22K Gold</span></div>
-              <div class="product-card__price">KWD 380.000</div>
+              <h3>خاتم ألماس بولكي</h3>
+              <div class="product-card__meta"><span class="product-card__weight">9.5 غرام - ذهب 22 قيراط</span></div>
+              <div class="product-card__price">380.000 د.ك</div>
             </div>
           </a>
           <a href="product.html" class="product-card">
             <div class="product-card__image product-card__image--gold-8"></div>
             <div class="product-card__info">
-              <h3>Classic Band Ring</h3>
-              <div class="product-card__meta"><span class="product-card__weight">4.0g &bull; 18K Gold</span></div>
-              <div class="product-card__price">KWD 128.000</div>
+              <h3>خاتم كلاسيكي</h3>
+              <div class="product-card__meta"><span class="product-card__weight">4.0 غرام - ذهب 18 قيراط</span></div>
+              <div class="product-card__price">128.000 د.ك</div>
             </div>
           </a>
           <a href="product.html" class="product-card">
             <div class="product-card__image product-card__image--gold-1"></div>
             <div class="product-card__info">
-              <h3>Bridal Temple Ring</h3>
-              <div class="product-card__meta"><span class="product-card__weight">18.2g &bull; 22K Gold</span></div>
-              <div class="product-card__price">KWD 645.000</div>
+              <h3>خاتم العروس المعبد</h3>
+              <div class="product-card__meta"><span class="product-card__weight">18.2 غرام - ذهب 22 قيراط</span></div>
+              <div class="product-card__price">645.000 د.ك</div>
             </div>
           </a>
         </div>
         <div class="carousel-controls">
-          <button class="carousel-btn" onclick="scrollCarousel(-1)" aria-label="Previous">
+          <button class="carousel-btn" onclick="scrollCarousel(-1)" aria-label="السابق">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
           </button>
-          <button class="carousel-btn" onclick="scrollCarousel(1)" aria-label="Next">
+          <button class="carousel-btn" onclick="scrollCarousel(1)" aria-label="التالي">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
         </div>
@@ -328,45 +273,44 @@
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
           <div class="footer__logo">
-            <div class="logo-mark">K</div>
+            <div class="logo-mark">ك</div>
             <div class="logo-text">
-              <span class="logo-name">KANCHWALA</span>
-              <span class="logo-tagline">JEWELLERS</span>
+              <span class="logo-name">كانشوالا</span>
+              <span class="logo-tagline">للمجوهرات</span>
             </div>
           </div>
-          <p>Trusted jewellers in Kuwait since 1962. Hallmarked gold, transparent pricing, timeless designs.</p>
+          <p>مجوهرات موثوقة في الكويت منذ 1962 مع تصاميم ذهبية راقية وعرض واضح للسعر النهائي.</p>
         </div>
         <div class="footer__links">
-          <h4>Collections</h4>
-          <a href="collection.html">Rings</a>
-          <a href="#">Necklaces</a>
-          <a href="#">Bangles</a>
-          <a href="#">Earrings</a>
-          <a href="#">Bridal Sets</a>
+          <h4>المجموعات</h4>
+          <a href="collection.html">الخواتم</a>
+          <a href="#">القلائد</a>
+          <a href="#">الأساور</a>
+          <a href="#">الأقراط</a>
+          <a href="#">أطقم العرائس</a>
         </div>
         <div class="footer__links">
-          <h4>Information</h4>
-          <a href="#">About Us</a>
-          <a href="#">Gold Rate</a>
-          <a href="#">Shipping Policy</a>
-          <a href="#">Return Policy</a>
-          <a href="#">Privacy Policy</a>
+          <h4>معلومات</h4>
+          <a href="#">من نحن</a>
+          <a href="#">سعر الذهب</a>
+          <a href="#">سياسة التوصيل</a>
+          <a href="#">سياسة الاسترجاع</a>
+          <a href="#">سياسة الخصوصية</a>
         </div>
         <div class="footer__links">
-          <h4>Contact</h4>
-          <p>Al Mubarakiya, Kuwait City<br>Kuwait</p>
+          <h4>التواصل</h4>
+          <p>المباركية، مدينة الكويت<br>الكويت</p>
           <p>+965 2222 3333</p>
           <p>info@kanchwala.com</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2026 Kanchwala Jewellers. All rights reserved.</p>
+        <p>© 2026 مجوهرات كانشوالا. جميع الحقوق محفوظة.</p>
         <div class="footer__payments">
           <span>KNET</span>
           <span>Visa</span>
@@ -376,31 +320,30 @@
     </div>
   </footer>
 
-  <!-- Cart Drawer (same civil ID form as index) -->
   <div class="cart-drawer" id="cartDrawer">
     <div class="cart-drawer__overlay" onclick="closeCart()"></div>
     <div class="cart-drawer__panel">
       <div class="cart-drawer__header">
-        <h3>Shopping Bag</h3>
-        <button onclick="closeCart()" class="cart-drawer__close">&times;</button>
+        <h3>سلة التسوق</h3>
+        <button onclick="closeCart()" class="cart-drawer__close" aria-label="إغلاق">&times;</button>
       </div>
       <div class="cart-drawer__items" id="cartItems"></div>
       <div class="cart-drawer__footer" id="cartFooter" style="display:none;">
         <div class="cart-drawer__totals">
           <div class="cart-drawer__total-row">
-            <span>Subtotal</span>
-            <span id="cartSubtotal">KWD 0.000</span>
+            <span>المجموع الفرعي</span>
+            <span id="cartSubtotal">0.000 د.ك</span>
           </div>
           <div class="cart-drawer__total-row cart-drawer__total-row--grand">
-            <span>Total</span>
-            <span id="cartTotal">KWD 0.000</span>
+            <span>الإجمالي</span>
+            <span id="cartTotal">0.000 د.ك</span>
           </div>
         </div>
         <div class="civil-id-section" id="civilIdSection">
           <button class="civil-id-section__toggle" onclick="toggleCivilId()">
             <div class="civil-id-section__toggle-left">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <span>Civil ID Required for Checkout</span>
+              <span>البطاقة المدنية مطلوبة لإتمام الطلب</span>
             </div>
             <div class="civil-id-section__toggle-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
@@ -408,53 +351,53 @@
           </button>
           <div class="civil-id-section__body">
             <div class="civil-id-section__inner">
-          <p class="civil-id-section__note">Kuwait law requires valid Civil ID for gold purchases.</p>
-          <div class="civil-id-form">
-            <div class="form-group">
-              <label for="civilIdName">Full Name (as on Civil ID) *</label>
-              <input type="text" id="civilIdName" placeholder="Enter full name" required>
-            </div>
-            <div class="form-group">
-              <label for="civilIdNumber">Civil ID Number *</label>
-              <input type="text" id="civilIdNumber" placeholder="e.g. 281234567890" maxlength="12" required>
-            </div>
-            <div class="form-group">
-              <label for="civilIdPhone">Phone Number *</label>
-              <input type="tel" id="civilIdPhone" placeholder="+965 XXXX XXXX" required>
-            </div>
-            <div class="form-group">
-              <label>Civil ID Image (Front &amp; Back) *</label>
-              <div class="civil-id-upload" id="civilIdUpload">
-                <input type="file" id="civilIdFile" accept="image/*" multiple onchange="handleCivilIdUpload(this)">
-                <div class="civil-id-upload__placeholder" id="civilIdPlaceholder">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-                  <span>Tap to upload Civil ID images</span>
-                  <small>Front &amp; back required &bull; JPG, PNG</small>
+              <p class="civil-id-section__note">يشترط القانون الكويتي وجود بطاقة مدنية سارية لشراء الذهب.</p>
+              <div class="civil-id-form">
+                <div class="form-group">
+                  <label for="civilIdName">الاسم الكامل كما هو في البطاقة *</label>
+                  <input type="text" id="civilIdName" placeholder="اكتب الاسم الكامل" required>
                 </div>
-                <div class="civil-id-upload__preview" id="civilIdPreview" style="display:none;"></div>
+                <div class="form-group">
+                  <label for="civilIdNumber">رقم البطاقة المدنية *</label>
+                  <input type="text" id="civilIdNumber" placeholder="مثال: 281234567890" maxlength="12" required>
+                </div>
+                <div class="form-group">
+                  <label for="civilIdPhone">رقم الهاتف *</label>
+                  <input type="tel" id="civilIdPhone" placeholder="+965 XXXX XXXX" required>
+                </div>
+                <div class="form-group">
+                  <label>صورة البطاقة المدنية من الأمام والخلف *</label>
+                  <div class="civil-id-upload" id="civilIdUpload">
+                    <input type="file" id="civilIdFile" accept="image/*" multiple onchange="handleCivilIdUpload(this)">
+                    <div class="civil-id-upload__placeholder" id="civilIdPlaceholder">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+                      <span>اضغط لرفع صور البطاقة المدنية</span>
+                      <small>الصورتان مطلوبة - JPG أو PNG</small>
+                    </div>
+                    <div class="civil-id-upload__preview" id="civilIdPreview" style="display:none;"></div>
+                  </div>
+                </div>
+                <div class="form-group form-group--checkbox">
+                  <label class="checkbox-label">
+                    <input type="checkbox" id="civilIdConsent">
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-text">أوافق على مشاركة بيانات البطاقة المدنية مع مجوهرات كانشوالا لأغراض التحقق من الطلب حسب متطلبات القانون الكويتي، وسيتم التعامل مع البيانات وفقا لـ <a href="#" style="color:var(--color-gold-dark);text-decoration:underline;">سياسة الخصوصية</a>.</span>
+                  </label>
+                </div>
               </div>
-            </div>
-            <div class="form-group form-group--checkbox">
-              <label class="checkbox-label">
-                <input type="checkbox" id="civilIdConsent">
-                <span class="checkbox-custom"></span>
-                <span class="checkbox-text">I consent to share my Civil ID details with Kanchwala Jewellers for order verification purposes as required by Kuwait law. My data will be handled per the <a href="#" style="color:var(--color-gold-dark);text-decoration:underline;">Privacy Policy</a>.</span>
-              </label>
-            </div>
-          </div>
             </div>
           </div>
         </div>
-        <button class="btn btn--primary btn--full" id="checkoutBtn" onclick="handleCheckout()">Proceed to Checkout</button>
+        <button class="btn btn--primary btn--full" id="checkoutBtn" onclick="handleCheckout()">إتمام الطلب</button>
         <p class="cart-drawer__secure">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-          Secure checkout &bull; SSL encrypted
+          دفع آمن - اتصال مشفر
         </p>
       </div>
       <div class="cart-drawer__empty" id="cartEmpty">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <p>Your bag is empty</p>
-        <a href="collection.html" class="btn btn--outline btn--sm">Browse Collections</a>
+        <p>السلة فارغة حاليا</p>
+        <a href="collection.html" class="btn btn--outline btn--sm">تصفح المجموعات</a>
       </div>
     </div>
   </div>
@@ -468,22 +411,20 @@
 
     function changeQty(delta) {
       const input = document.getElementById('productQty');
-      let val = parseInt(input.value) + delta;
+      let val = parseInt(input.value, 10) + delta;
       if (val < 1) val = 1;
       if (val > 5) val = 5;
       input.value = val;
     }
 
     function addProductToCart() {
-      const qty = parseInt(document.getElementById('productQty').value);
+      const qty = parseInt(document.getElementById('productQty').value, 10);
       const product = {
         id: 'kj-rng-0847',
-        name: 'Royal Solitaire Ring',
-        weight: '8.2g',
-        karat: '22K Gold',
-        goldValue: 184.09,
-        makingCharge: 85.00,
-        stoneCharge: 15.91,
+        name: 'خاتم السوليتير الملكي',
+        weight: '8.200 غرام',
+        goldWeight: '7.860 غرام',
+        karat: 'ذهب 22 قيراط',
         price: 285.00,
         size: document.querySelector('.size-btn.active')?.textContent || '7',
         qty: qty,
@@ -492,16 +433,13 @@
       addToCart(product);
     }
 
-    function togglePricing() {
-      document.getElementById('pricingBreakdown').classList.toggle('open');
-    }
-
     const galleryBgs = [
       'product-card__image--gold-1',
       'product-card__image--gold-4',
       'product-card__image--gold-7',
       'product-card__image--gold-3'
     ];
+
     function changeGalleryBg(thumb, idx) {
       const main = document.getElementById('mainGallery');
       galleryBgs.forEach(c => main.classList.remove(c));
