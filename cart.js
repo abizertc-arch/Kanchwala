@@ -211,8 +211,9 @@ function handleCheckout() {
   if (cart.length === 0) return;
 
   if (!validateCivilId()) {
-    const section = document.querySelector('.civil-id-section');
+    const section = document.getElementById('civilIdSection');
     if (section) {
+      if (!section.classList.contains('open')) section.classList.add('open');
       section.style.borderColor = '#c0392b';
       section.scrollIntoView({ behavior: 'smooth', block: 'center' });
       setTimeout(() => { section.style.borderColor = ''; }, 3000);
@@ -281,6 +282,11 @@ function handleCheckout() {
       btn.style.pointerEvents = 'auto';
     }
   }, 800);
+}
+
+function toggleCivilId() {
+  const section = document.getElementById('civilIdSection');
+  if (section) section.classList.toggle('open');
 }
 
 function toggleMobileMenu() {

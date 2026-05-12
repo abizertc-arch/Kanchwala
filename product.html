@@ -396,11 +396,18 @@
             <span id="cartTotal">KWD 0.000</span>
           </div>
         </div>
-        <div class="civil-id-section">
-          <div class="civil-id-section__header">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            <span>Civil ID Required for Checkout</span>
-          </div>
+        <div class="civil-id-section" id="civilIdSection">
+          <button class="civil-id-section__toggle" onclick="toggleCivilId()">
+            <div class="civil-id-section__toggle-left">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>Civil ID Required for Checkout</span>
+            </div>
+            <div class="civil-id-section__toggle-arrow">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </div>
+          </button>
+          <div class="civil-id-section__body">
+            <div class="civil-id-section__inner">
           <p class="civil-id-section__note">Kuwait law requires valid Civil ID for gold purchases.</p>
           <div class="civil-id-form">
             <div class="form-group">
@@ -433,6 +440,8 @@
                 <span class="checkbox-custom"></span>
                 <span class="checkbox-text">I consent to share my Civil ID details with Kanchwala Jewellers for order verification purposes as required by Kuwait law. My data will be handled per the <a href="#" style="color:var(--color-gold-dark);text-decoration:underline;">Privacy Policy</a>.</span>
               </label>
+            </div>
+          </div>
             </div>
           </div>
         </div>

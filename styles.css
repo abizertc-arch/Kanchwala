@@ -1140,11 +1140,23 @@ img {
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: 4px;
-  padding: 20px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 
-.civil-id-section__header {
+.civil-id-section__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.civil-id-section__toggle-left {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -1153,7 +1165,29 @@ img {
   letter-spacing: 0.5px;
   text-transform: uppercase;
   color: var(--color-burgundy);
-  margin-bottom: 8px;
+}
+
+.civil-id-section__toggle-arrow {
+  transition: transform 0.3s var(--ease-luxury);
+  color: var(--color-burgundy);
+}
+
+.civil-id-section.open .civil-id-section__toggle-arrow {
+  transform: rotate(180deg);
+}
+
+.civil-id-section__body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s var(--ease-luxury);
+}
+
+.civil-id-section.open .civil-id-section__body {
+  max-height: 800px;
+}
+
+.civil-id-section__inner {
+  padding: 0 20px 20px;
 }
 
 .civil-id-section__note {
