@@ -1177,13 +1177,11 @@ img {
 }
 
 .civil-id-section__body {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.4s var(--ease-luxury);
+  display: none;
 }
 
 .civil-id-section.open .civil-id-section__body {
-  max-height: 800px;
+  display: block;
 }
 
 .civil-id-section__inner {
