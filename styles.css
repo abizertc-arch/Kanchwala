@@ -1473,7 +1473,8 @@ img {
    PRODUCT PAGE
    ======================================== */
 .product-page {
-  padding: 20px 0 80px;
+  padding: 0 0 80px;
+  background: #fff;
 }
 
 .product-layout {
@@ -1490,25 +1491,24 @@ img {
 
 .product-gallery__main {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 3 / 4;
   min-height: 0;
   padding-bottom: 0;
   border-radius: 0;
   position: relative;
   margin-bottom: 12px;
   overflow: hidden;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #faf8f4;
+  background-color: var(--color-white);
   transition: background 0.5s var(--ease-luxury);
 }
 
 .product-gallery__main--hero {
-  background-color: #faf8f4;
+  background-color: var(--color-white);
   background-image: url('images/ring-1.jpeg');
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 
@@ -1531,10 +1531,9 @@ img {
   cursor: pointer;
   transition: border-color 0.3s;
   overflow: hidden;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
-  background-color: #faf8f4;
+  background-color: var(--color-white);
 }
 
 .product-gallery__thumb img {
@@ -1574,6 +1573,7 @@ img {
   font-size: 11px;
   color: var(--color-text-light);
   margin-bottom: 16px;
+}
 }
 
 .product-info__price-main {
@@ -2187,6 +2187,10 @@ html[dir="ltr"] body {
   text-align: left;
 }
 
+body:has(.product-page) {
+  background: #fff;
+}
+
 .announcement-bar {
   background: linear-gradient(90deg, #4a3927 0%, #2d2418 100%);
   color: #f2dfb7;
@@ -2400,19 +2404,22 @@ html[dir="ltr"] .mobile-menu__close {
 .trust-bar,
 .gold-rate-section,
 .section--soft {
-  background: linear-gradient(180deg, rgba(252, 245, 234, 0.92), rgba(255, 252, 245, 0.96));
+  background: var(--color-white);
 }
 
 .collection-card,
 .product-card--soft,
 .gold-rate-card,
 .pricing-breakdown,
-.product-description,
 .cart-drawer__panel,
 .civil-id-section,
-.collection-toolbar,
-.breadcrumb-shell {
+.collection-toolbar {
   border-radius: 24px;
+}
+
+.product-description,
+.breadcrumb-shell {
+  border-radius: 0;
 }
 
 .product-card--soft {
@@ -2500,13 +2507,13 @@ html[dir="ltr"] .mobile-menu__close {
 }
 
 .breadcrumb-shell {
-  background: rgba(255, 248, 236, 0.84);
-  border-bottom: 1px solid rgba(199, 163, 95, 0.16);
-  margin-bottom: 8px;
+  background: var(--color-white);
+  border-bottom: none;
+  margin-bottom: 0;
 }
 
 .breadcrumb-shell .breadcrumb {
-  padding: 16px 0;
+  padding: 12px 0;
   color: var(--color-text-light);
 }
 
@@ -2541,16 +2548,15 @@ html[dir="ltr"] .mobile-menu__close {
   width: 100%;
   border-radius: 0;
   box-shadow: none;
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
 }
 
 .pricing-breakdown,
 .product-description {
-  background: rgba(255, 250, 242, 0.9);
-  border: 1px solid rgba(199, 163, 95, 0.18);
-  box-shadow: 0 16px 36px rgba(78, 60, 32, 0.07);
+  background: none;
+  border: none;
+  box-shadow: none;
 }
 
 .pricing-breakdown__toggle {
@@ -2566,7 +2572,7 @@ html[dir="ltr"] .mobile-menu__close {
 }
 
 .product-description {
-  padding: 28px;
+  padding: 28px 20px;
 }
 
 .product-page .carousel-track .product-card__image {
@@ -2706,7 +2712,7 @@ html[dir="rtl"] .cart-drawer__total-row {
   }
 
   .product-page {
-    padding-top: 8px;
+    padding-top: 0;
   }
 
   .header__container {
@@ -2780,10 +2786,9 @@ html[dir="rtl"] .cart-drawer__total-row {
   }
 
   .product-gallery__main {
-    aspect-ratio: 1 / 1;
-    background-size: contain;
+    aspect-ratio: 3 / 4;
+    background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     box-shadow: none;
   }
 
@@ -2798,26 +2803,24 @@ html[dir="rtl"] .cart-drawer__total-row {
     width: 64px;
     height: 64px;
     border-radius: 8px;
-    background-color: #faf8f4;
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: var(--color-white);
+    background-size: cover;
     background-position: center;
   }
 
   .product-info {
-    margin-top: 18px;
+    margin-top: 0;
     padding: 24px 20px 0;
-    background: linear-gradient(180deg, rgba(255, 251, 244, 0.98), rgba(251, 242, 226, 0.98));
-    border-top-left-radius: 28px;
-    border-top-right-radius: 28px;
-    box-shadow: 0 -12px 28px rgba(104, 77, 35, 0.08);
+    background: var(--color-white);
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .product-info__brand,
   .product-info__title,
   .product-info__sku,
   .product-info__price-main {
-    text-align: center;
+    text-align: start;
   }
 
   .product-info__brand {
@@ -2839,7 +2842,7 @@ html[dir="rtl"] .cart-drawer__total-row {
 
   .pricing-breakdown,
   .product-description {
-    border-radius: 22px;
+    border-radius: 0;
   }
 
   .product-actions {
@@ -2878,7 +2881,7 @@ html[dir="rtl"] .cart-drawer__total-row {
   }
 
   .product-page {
-    padding-top: 6px;
+    padding-top: 0;
   }
 
   .header {
@@ -2945,7 +2948,7 @@ html[dir="rtl"] .cart-drawer__total-row {
   }
 
   .product-gallery__main {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 3 / 4;
   }
 
   .product-gallery__thumbs {
@@ -2959,10 +2962,9 @@ html[dir="rtl"] .cart-drawer__total-row {
   }
 
   .product-info {
-    margin-top: 16px;
+    margin-top: 0;
     padding: 22px 16px 0;
-    border-top-left-radius: 24px;
-    border-top-right-radius: 24px;
+    border-radius: 0;
   }
 
   .product-info__title {

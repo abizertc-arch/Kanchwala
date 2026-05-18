@@ -71,6 +71,13 @@
     <div class="mobile-menu__overlay" onclick="toggleMobileMenu()"></div>
     <div class="mobile-menu__panel">
       <button class="mobile-menu__close" data-en-aria="Close" aria-label="إغلاق" onclick="toggleMobileMenu()">&times;</button>
+      <a href="index.html" class="mobile-menu__brand">
+        <div class="logo-mark">ك</div>
+        <div class="logo-text">
+          <span class="logo-name" data-en="Kanchwala">كانشوالا</span>
+          <span class="logo-tagline" data-en="Jewellery">للمجوهرات</span>
+        </div>
+      </a>
       <div class="mobile-menu__utility">
         <button class="lang-switch lang-switch--mobile" data-lang-toggle type="button" onclick="toggleLanguage()" aria-label="Switch to English">English</button>
       </div>
@@ -249,16 +256,6 @@
       </div>
       <div class="cart-drawer__items" id="cartItems"></div>
       <div class="cart-drawer__footer" id="cartFooter" style="display:none;">
-        <div class="cart-drawer__totals">
-          <div class="cart-drawer__total-row">
-            <span data-en="Subtotal">المجموع الفرعي</span>
-            <span id="cartSubtotal">0.000 د.ك</span>
-          </div>
-          <div class="cart-drawer__total-row cart-drawer__total-row--grand">
-            <span data-en="Total">الإجمالي</span>
-            <span id="cartTotal">0.000 د.ك</span>
-          </div>
-        </div>
         <div class="civil-id-section" id="civilIdSection">
           <button class="civil-id-section__toggle" onclick="toggleCivilId()">
             <div class="civil-id-section__toggle-left">
@@ -306,6 +303,16 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="cart-drawer__totals">
+          <div class="cart-drawer__total-row">
+            <span data-en="Subtotal">المجموع الفرعي</span>
+            <span id="cartSubtotal">0.000 د.ك</span>
+          </div>
+          <div class="cart-drawer__total-row cart-drawer__total-row--grand">
+            <span data-en="Total">الإجمالي</span>
+            <span id="cartTotal">0.000 د.ك</span>
           </div>
         </div>
         <button class="btn btn--primary btn--full" id="checkoutBtn" onclick="handleCheckout()" data-en="Complete order">كمّل الطلب</button>

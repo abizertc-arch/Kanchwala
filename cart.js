@@ -201,7 +201,7 @@ function renderCart() {
           <div class="cart-item__name">${itemName}</div>
           <div class="cart-item__meta">${t('cartWeight')} ${itemWeight} ${goldWeightText} &bull; ${itemKarat} ${sizeText} &bull; ${t('cartQty')}: ${item.qty}</div>
           <div class="cart-item__pricing">
-            <strong>${t('cartTotalPrice')}: ${formatKWD(itemTotal)}</strong>
+            <strong>${formatKWD(itemTotal)}</strong>
           </div>
           <button class="cart-item__remove" onclick="removeFromCart(${index})">${t('removeItem')}</button>
         </div>

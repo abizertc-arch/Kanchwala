@@ -344,16 +344,6 @@
       </div>
       <div class="cart-drawer__items" id="cartItems"></div>
       <div class="cart-drawer__footer" id="cartFooter" style="display:none;">
-        <div class="cart-drawer__totals">
-          <div class="cart-drawer__total-row">
-            <span data-en="Subtotal">المجموع الفرعي</span>
-            <span id="cartSubtotal">0.000 د.ك</span>
-          </div>
-          <div class="cart-drawer__total-row cart-drawer__total-row--grand">
-            <span data-en="Total">الإجمالي</span>
-            <span id="cartTotal">0.000 د.ك</span>
-          </div>
-        </div>
         <div class="civil-id-section" id="civilIdSection">
           <button class="civil-id-section__toggle" onclick="toggleCivilId()">
             <div class="civil-id-section__toggle-left">
@@ -401,6 +391,16 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="cart-drawer__totals">
+          <div class="cart-drawer__total-row">
+            <span data-en="Subtotal">المجموع الفرعي</span>
+            <span id="cartSubtotal">0.000 د.ك</span>
+          </div>
+          <div class="cart-drawer__total-row cart-drawer__total-row--grand">
+            <span data-en="Total">الإجمالي</span>
+            <span id="cartTotal">0.000 د.ك</span>
           </div>
         </div>
         <button class="btn btn--primary btn--full" id="checkoutBtn" onclick="handleCheckout()" data-en="Complete order">كمّل الطلب</button>
