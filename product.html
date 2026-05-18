@@ -71,6 +71,13 @@
     <div class="mobile-menu__overlay" onclick="toggleMobileMenu()"></div>
     <div class="mobile-menu__panel">
       <button class="mobile-menu__close" data-en-aria="Close" aria-label="إغلاق" onclick="toggleMobileMenu()">&times;</button>
+      <a href="index.html" class="mobile-menu__brand">
+        <div class="logo-mark">ك</div>
+        <div class="logo-text">
+          <span class="logo-name" data-en="Kanchwala">كانشوالا</span>
+          <span class="logo-tagline" data-en="Jewellery">للمجوهرات</span>
+        </div>
+      </a>
       <div class="mobile-menu__utility">
         <button class="lang-switch lang-switch--mobile" data-lang-toggle type="button" onclick="toggleLanguage()" aria-label="Switch to English">English</button>
       </div>
@@ -100,16 +107,7 @@
       <div class="product-layout">
 
         <div class="product-gallery">
-          <div class="product-gallery__main product-gallery__main--hero" id="mainGallery">
-            <div class="product-gallery__jewel-icon">
-              <svg width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#c49b48" stroke-width="0.5">
-                <circle cx="12" cy="12" r="9"/>
-                <circle cx="12" cy="12" r="5"/>
-                <circle cx="12" cy="9" r="2"/>
-                <path d="M10 9l2-3 2 3"/>
-              </svg>
-            </div>
-          </div>
+          <div class="product-gallery__main product-gallery__main--hero" id="mainGallery"></div>
           <div class="product-gallery__thumbs">
             <div class="product-gallery__thumb active product-card__image--gold-1" onclick="changeGalleryBg(this, 0)"></div>
             <div class="product-gallery__thumb product-card__image--gold-4" onclick="changeGalleryBg(this, 1)"></div>
