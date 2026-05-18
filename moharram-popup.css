@@ -1,0 +1,364 @@
+/* Moharram Closure Popup — Kanchwala Jewellers */
+
+.moharram-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 400;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+              visibility 0.5s;
+  padding: 16px;
+}
+
+.moharram-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.moharram-popup {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  max-height: 92vh;
+  overflow-y: auto;
+  background: linear-gradient(165deg, #FAF6F0 0%, #F5EDE0 50%, #EDE4D3 100%);
+  border: 2px solid #C9A96E;
+  border-radius: 12px;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35),
+              0 0 0 1px rgba(201, 169, 110, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  transform: scale(0.88);
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1),
+              opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  direction: rtl;
+}
+
+.moharram-overlay.active .moharram-popup {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Islamic geometric corner decorations */
+.moharram-popup::before,
+.moharram-popup::after {
+  content: '✦';
+  position: absolute;
+  font-size: 28px;
+  color: #C9A96E;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.moharram-popup::before {
+  top: 12px;
+  right: 16px;
+}
+
+.moharram-popup::after {
+  bottom: 12px;
+  left: 16px;
+}
+
+/* Header band */
+.moharram-header {
+  background: linear-gradient(135deg, #5C0A2E 0%, #3D0620 100%);
+  padding: 28px 24px 22px;
+  text-align: center;
+  border-radius: 10px 10px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.moharram-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(201, 169, 110, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 50%, rgba(201, 169, 110, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* Geometric border line under header */
+.moharram-header::after {
+  content: '◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆ ◇ ◆';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 8px;
+  letter-spacing: 4px;
+  color: #C9A96E;
+  opacity: 0.5;
+  text-align: center;
+  line-height: 1;
+  padding-bottom: 4px;
+}
+
+.moharram-crescent {
+  display: block;
+  margin: 0 auto 12px;
+}
+
+.moharram-ya-hussain {
+  font-family: 'Noto Kufi Arabic', 'Cairo', serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #C9A96E;
+  line-height: 1.3;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.moharram-ya-hussain-en {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(201, 169, 110, 0.7);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-top: 4px;
+  direction: ltr;
+}
+
+/* Close button */
+.moharram-close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid rgba(201, 169, 110, 0.4);
+  border-radius: 50%;
+  background: rgba(201, 169, 110, 0.15);
+  color: #C9A96E;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s, transform 0.2s;
+  z-index: 2;
+  line-height: 1;
+}
+
+.moharram-close:hover {
+  background: rgba(201, 169, 110, 0.3);
+  transform: scale(1.1);
+}
+
+/* Body content */
+.moharram-body {
+  padding: 28px 28px 24px;
+  text-align: center;
+}
+
+/* Gold ornamental divider */
+.moharram-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 0 20px;
+  color: #C9A96E;
+  font-size: 10px;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+.moharram-divider::before,
+.moharram-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C9A96E, transparent);
+}
+
+.moharram-title-ar {
+  font-family: 'Noto Kufi Arabic', 'Cairo', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #5C0A2E;
+  margin: 0 0 4px;
+}
+
+.moharram-title-en {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 13px;
+  color: #777777;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  direction: ltr;
+}
+
+/* Date highlight box */
+.moharram-dates {
+  background: linear-gradient(135deg, #5C0A2E, #7A1040);
+  border-radius: 8px;
+  padding: 18px 20px;
+  margin: 0 0 18px;
+  position: relative;
+}
+
+.moharram-dates::before {
+  content: '☪';
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  font-size: 24px;
+  opacity: 0.15;
+  color: #C9A96E;
+}
+
+.moharram-date-ar {
+  font-family: 'Noto Kufi Arabic', 'Cairo', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #C9A96E;
+  margin: 0 0 4px;
+}
+
+.moharram-date-en {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+  direction: ltr;
+}
+
+/* Notice text */
+.moharram-notice {
+  margin: 0 0 8px;
+}
+
+.moharram-notice-ar {
+  font-family: 'Noto Kufi Arabic', 'Cairo', sans-serif;
+  font-size: 15px;
+  color: #333333;
+  line-height: 1.7;
+  margin: 0 0 6px;
+}
+
+.moharram-notice-en {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 13px;
+  color: #777777;
+  line-height: 1.6;
+  margin: 0;
+  direction: ltr;
+}
+
+/* Dispatch warning */
+.moharram-dispatch {
+  background: rgba(201, 169, 110, 0.12);
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  border-radius: 8px;
+  padding: 14px 16px;
+  margin: 16px 0 22px;
+}
+
+.moharram-dispatch-ar {
+  font-family: 'Noto Kufi Arabic', 'Cairo', sans-serif;
+  font-size: 14px;
+  color: #5C0A2E;
+  font-weight: 600;
+  line-height: 1.7;
+  margin: 0 0 6px;
+}
+
+.moharram-dispatch-en {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 12px;
+  color: #777777;
+  line-height: 1.6;
+  margin: 0;
+  direction: ltr;
+}
+
+/* CTA button */
+.moharram-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #5C0A2E 0%, #7A1040 100%);
+  color: #C9A96E;
+  border: 1px solid #C9A96E;
+  border-radius: 6px;
+  padding: 12px 48px;
+  font-family: 'Noto Kufi Arabic', 'Cairo', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+  letter-spacing: 1px;
+}
+
+.moharram-btn:hover {
+  background: linear-gradient(135deg, #7A1040 0%, #5C0A2E 100%);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(92, 10, 46, 0.3);
+}
+
+.moharram-btn-en {
+  display: block;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.8;
+  margin-top: 2px;
+  letter-spacing: 2px;
+  direction: ltr;
+}
+
+/* Bottom decorative band */
+.moharram-footer {
+  text-align: center;
+  padding: 10px;
+  font-size: 8px;
+  letter-spacing: 6px;
+  color: #C9A96E;
+  opacity: 0.4;
+  border-top: 1px solid rgba(201, 169, 110, 0.2);
+}
+
+/* Responsive */
+@media (max-width: 560px) {
+  .moharram-popup {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .moharram-header {
+    padding: 22px 18px 18px;
+  }
+
+  .moharram-ya-hussain {
+    font-size: 28px;
+  }
+
+  .moharram-body {
+    padding: 20px 18px 18px;
+  }
+
+  .moharram-date-ar {
+    font-size: 17px;
+  }
+
+  .moharram-btn {
+    padding: 11px 36px;
+    font-size: 15px;
+  }
+
+  .moharram-close {
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+  }
+}

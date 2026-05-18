@@ -3,62 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>كانشوالا للمجوهرات | ذهب وفخامة على الذوق الكويتي</title>
+  <title data-en-title="Kanchwala Jewellery | Gold and elegance, Kuwait style">كانشوالا للمجوهرات | ذهب وفخامة على الذوق الكويتي</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Noto+Kufi+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <div class="announcement-bar">
     <div class="announcement-bar__track">
-      <div class="announcement-bar__slide">توصيلنا مجاني لكل مناطق الكويت</div>
+      <div class="announcement-bar__slide" data-en="Free delivery all across Kuwait">توصيلنا مجاني لكل مناطق الكويت</div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">سعر الذهب اليوم بالكويت: <strong>22.450 د.ك / غرام</strong></div>
+      <div class="announcement-bar__slide" data-en-html="Today&apos;s gold rate in Kuwait: <strong>KWD 22.450 / gram</strong>">سعر الذهب اليوم بالكويت: <strong>22.450 د.ك / غرام</strong></div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">لكم ويانا من 1962</div>
+      <div class="announcement-bar__slide" data-en="Trusted by you since 1962">لكم ويانا من 1962</div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">ذهب 916 مضمون</div>
+      <div class="announcement-bar__slide" data-en="Guaranteed 916 gold">ذهب 916 مضمون</div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">توصيلنا مجاني لكل مناطق الكويت</div>
+      <div class="announcement-bar__slide" data-en="Free delivery all across Kuwait">توصيلنا مجاني لكل مناطق الكويت</div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">سعر الذهب اليوم بالكويت: <strong>22.450 د.ك / غرام</strong></div>
+      <div class="announcement-bar__slide" data-en-html="Today&apos;s gold rate in Kuwait: <strong>KWD 22.450 / gram</strong>">سعر الذهب اليوم بالكويت: <strong>22.450 د.ك / غرام</strong></div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">لكم ويانا من 1962</div>
+      <div class="announcement-bar__slide" data-en="Trusted by you since 1962">لكم ويانا من 1962</div>
       <div class="announcement-bar__divider">&bull;</div>
-      <div class="announcement-bar__slide">ذهب 916 مضمون</div>
+      <div class="announcement-bar__slide" data-en="Guaranteed 916 gold">ذهب 916 مضمون</div>
     </div>
   </div>
 
   <header class="header">
     <div class="header__container">
-      <button class="header__menu-toggle" aria-label="القائمة" onclick="toggleMobileMenu()">
+      <button class="header__menu-toggle" data-en-aria="Menu" aria-label="القائمة" onclick="toggleMobileMenu()">
         <span></span><span></span><span></span>
       </button>
       <a href="index.html" class="header__logo">
         <div class="logo-mark">ك</div>
         <div class="logo-text">
-          <span class="logo-name">كانشوالا</span>
-          <span class="logo-tagline">للمجوهرات</span>
+          <span class="logo-name" data-en="Kanchwala">كانشوالا</span>
+          <span class="logo-tagline" data-en="Jewellery">للمجوهرات</span>
         </div>
       </a>
       <nav class="header__nav" id="mainNav">
-        <a href="index.html" class="active">الرئيسية</a>
-        <a href="collection.html">المجموعات</a>
-        <a href="product.html">الخواتم</a>
-        <a href="#">القلائد</a>
-        <a href="#">الأساور</a>
-        <a href="#">الأقراط</a>
+        <a href="index.html" class="active" data-en="Home">الرئيسية</a>
+        <a href="collection.html" data-en="Collections">المجموعات</a>
+        <a href="product.html" data-en="Rings">الخواتم</a>
+        <a href="#" data-en="Necklaces">القلائد</a>
+        <a href="#" data-en="Bangles">الأساور</a>
+        <a href="#" data-en="Earrings">الأقراط</a>
       </nav>
       <div class="header__actions">
-        <button class="header__icon" aria-label="بحث">
+        <button class="lang-switch" data-lang-toggle type="button" onclick="toggleLanguage()" aria-label="Switch to English">English</button>
+        <button class="header__icon" data-en-aria="Search" aria-label="بحث">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
         </button>
-        <button class="header__icon" aria-label="الحساب">
+        <button class="header__icon" data-en-aria="Account" aria-label="الحساب">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
         </button>
-        <button class="header__icon header__cart-btn" aria-label="السلة" onclick="openCart()">
+        <button class="header__icon header__cart-btn" data-en-aria="Cart" aria-label="السلة" onclick="openCart()">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
           <span class="cart-count" id="cartCount">0</span>
         </button>
@@ -69,14 +69,17 @@
   <div class="mobile-menu" id="mobileMenu">
     <div class="mobile-menu__overlay" onclick="toggleMobileMenu()"></div>
     <div class="mobile-menu__panel">
-      <button class="mobile-menu__close" aria-label="إغلاق" onclick="toggleMobileMenu()">&times;</button>
+      <button class="mobile-menu__close" data-en-aria="Close" aria-label="إغلاق" onclick="toggleMobileMenu()">&times;</button>
+      <div class="mobile-menu__utility">
+        <button class="lang-switch lang-switch--mobile" data-lang-toggle type="button" onclick="toggleLanguage()" aria-label="Switch to English">English</button>
+      </div>
       <nav class="mobile-menu__nav">
-        <a href="index.html">الرئيسية</a>
-        <a href="collection.html">المجموعات</a>
-        <a href="product.html">الخواتم</a>
-        <a href="#">القلائد</a>
-        <a href="#">الأساور</a>
-        <a href="#">الأقراط</a>
+        <a href="index.html" data-en="Home">الرئيسية</a>
+        <a href="collection.html" data-en="Collections">المجموعات</a>
+        <a href="product.html" data-en="Rings">الخواتم</a>
+        <a href="#" data-en="Necklaces">القلائد</a>
+        <a href="#" data-en="Bangles">الأساور</a>
+        <a href="#" data-en="Earrings">الأقراط</a>
       </nav>
     </div>
   </div>
@@ -86,16 +89,16 @@
       <div class="hero__gradient"></div>
     </div>
     <div class="hero__content">
-      <span class="hero__label">من 1962 - الكويت</span>
-      <h1 class="hero__title">فخامة تلبق عليكم<br>ومصوغة بذوق</h1>
-      <p class="hero__subtitle">إذا تبي قطعة تشرح القلب، هني تلقى الذهب المصنوع بذوق مع السعر النهائي ووزن القطعة ووزن الذهب بشكل واضح ومن غير لف ودوران.</p>
+      <span class="hero__label" data-en="Since 1962 - Kuwait">من 1962 - الكويت</span>
+      <h1 class="hero__title" data-en-html="Gold that feels elegant<br>and made with taste">فخامة تلبق عليكم<br>ومصوغة بذوق</h1>
+      <p class="hero__subtitle" data-en="If you want a piece that feels special, you will find beautifully made gold here with the final price, total weight, and gold weight shown clearly from the start.">إذا تبي قطعة تشرح القلب، هني تلقى الذهب المصنوع بذوق مع السعر النهائي ووزن القطعة ووزن الذهب بشكل واضح ومن غير لف ودوران.</p>
       <div class="hero__actions">
-        <a href="collection.html" class="btn btn--primary">شوف المجموعات</a>
-        <a href="product.html" class="btn btn--outline">شوف الجديد</a>
+        <a href="collection.html" class="btn btn--primary" data-en="See collections">شوف المجموعات</a>
+        <a href="product.html" class="btn btn--outline" data-en="See what&apos;s new">شوف الجديد</a>
       </div>
     </div>
     <div class="hero__scroll-indicator">
-      <span>انزل تحت</span>
+      <span data-en="Scroll down">انزل تحت</span>
       <div class="hero__scroll-line"></div>
     </div>
   </section>
@@ -108,8 +111,8 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           </div>
           <div>
-            <strong>ضمان وثقة</strong>
-            <span>ذهب 916 مضمون</span>
+            <strong data-en="Confidence and guarantee">ضمان وثقة</strong>
+            <span data-en="Guaranteed 916 gold">ذهب 916 مضمون</span>
           </div>
         </div>
         <div class="trust-item">
@@ -117,8 +120,8 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M2 12h20"/><circle cx="12" cy="12" r="10"/></svg>
           </div>
           <div>
-            <strong>سعر واضح</strong>
-            <span>الوزن والعيار مبينين</span>
+            <strong data-en="Clear pricing">سعر واضح</strong>
+            <span data-en="Weight and karat are shown">الوزن والعيار مبينين</span>
           </div>
         </div>
         <div class="trust-item">
@@ -126,8 +129,8 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="23 7 16 12 16 2 23 7"/></svg>
           </div>
           <div>
-            <strong>توصيل مجاني</strong>
-            <span>حق كل الكويت</span>
+            <strong data-en="Free delivery">توصيل مجاني</strong>
+            <span data-en="Across Kuwait">حق كل الكويت</span>
           </div>
         </div>
         <div class="trust-item">
@@ -135,8 +138,8 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
           </div>
           <div>
-            <strong>سنين خبرة</strong>
-            <span>أكثر من 60 سنة</span>
+            <strong data-en="Years of experience">سنين خبرة</strong>
+            <span data-en="More than 60 years">أكثر من 60 سنة</span>
           </div>
         </div>
       </div>
@@ -146,19 +149,19 @@
   <section class="section featured-collections">
     <div class="container">
       <div class="section__header">
-        <span class="section__label">حكايتنا</span>
-        <h2 class="section__title">مجموعاتنا المختارة</h2>
-        <p class="section__desc">كل قطعة فيها لمسة شغل متعوب عليه من سنين</p>
+        <span class="section__label" data-en="Our story">حكايتنا</span>
+        <h2 class="section__title" data-en="Our selected collections">مجموعاتنا المختارة</h2>
+        <p class="section__desc" data-en="Every piece carries the touch of careful work built over many years.">كل قطعة فيها لمسة شغل متعوب عليه من سنين</p>
       </div>
       <div class="collections-grid">
         <a href="collection.html" class="collection-card collection-card--large">
           <div class="collection-card__image collection-bg--bridal">
             <div class="collection-card__overlay"></div>
             <div class="collection-card__content">
-              <span class="collection-card__count">48 قطعة</span>
-              <h3>مجموعة العرائس</h3>
-              <p>أطقم تفتح النفس حق يومكم المميز</p>
-              <span class="collection-card__link">شوف المجموعة</span>
+              <span class="collection-card__count" data-en="48 pieces">48 قطعة</span>
+              <h3 data-en="Bridal collection">مجموعة العرائس</h3>
+              <p data-en="Sets that feel perfect for your special day.">أطقم تفتح النفس حق يومكم المميز</p>
+              <span class="collection-card__link" data-en="View collection">شوف المجموعة</span>
             </div>
           </div>
         </a>
@@ -166,9 +169,9 @@
           <div class="collection-card__image collection-bg--rings">
             <div class="collection-card__overlay"></div>
             <div class="collection-card__content">
-              <span class="collection-card__count">36 قطعة</span>
-              <h3>الخواتم</h3>
-              <span class="collection-card__link">شوف القطع</span>
+              <span class="collection-card__count" data-en="36 pieces">36 قطعة</span>
+              <h3 data-en="Rings">الخواتم</h3>
+              <span class="collection-card__link" data-en="View pieces">شوف القطع</span>
             </div>
           </div>
         </a>
@@ -176,9 +179,9 @@
           <div class="collection-card__image collection-bg--necklaces">
             <div class="collection-card__overlay"></div>
             <div class="collection-card__content">
-              <span class="collection-card__count">52 قطعة</span>
-              <h3>القلائد</h3>
-              <span class="collection-card__link">شوف القطع</span>
+              <span class="collection-card__count" data-en="52 pieces">52 قطعة</span>
+              <h3 data-en="Necklaces">القلائد</h3>
+              <span class="collection-card__link" data-en="View pieces">شوف القطع</span>
             </div>
           </div>
         </a>
@@ -186,9 +189,9 @@
           <div class="collection-card__image collection-bg--bangles">
             <div class="collection-card__overlay"></div>
             <div class="collection-card__content">
-              <span class="collection-card__count">29 قطعة</span>
-              <h3>الأساور</h3>
-              <span class="collection-card__link">شوف القطع</span>
+              <span class="collection-card__count" data-en="29 pieces">29 قطعة</span>
+              <h3 data-en="Bangles">الأساور</h3>
+              <span class="collection-card__link" data-en="View pieces">شوف القطع</span>
             </div>
           </div>
         </a>
@@ -196,9 +199,9 @@
           <div class="collection-card__image collection-bg--earrings">
             <div class="collection-card__overlay"></div>
             <div class="collection-card__content">
-              <span class="collection-card__count">41 قطعة</span>
-              <h3>الأقراط</h3>
-              <span class="collection-card__link">شوف القطع</span>
+              <span class="collection-card__count" data-en="41 pieces">41 قطعة</span>
+              <h3 data-en="Earrings">الأقراط</h3>
+              <span class="collection-card__link" data-en="View pieces">شوف القطع</span>
             </div>
           </div>
         </a>
@@ -209,18 +212,18 @@
   <section class="section featured-products">
     <div class="container">
       <div class="section__header">
-        <span class="section__label">مختارينهم لكم</span>
-        <h2 class="section__title">الواصل حديثا</h2>
+        <span class="section__label" data-en="Picked for you">مختارينهم لكم</span>
+        <h2 class="section__title" data-en="New arrivals">الواصل حديثا</h2>
       </div>
       <div class="products-grid">
         <a href="product.html" class="product-card">
           <div class="product-card__image product-card__image--gold-1">
-            <div class="product-card__badge">توّه واصل</div>
+            <div class="product-card__badge" data-en="Just in">توّه واصل</div>
           </div>
           <div class="product-card__info">
-            <h3>خاتم السوليتير الملكي</h3>
+            <h3 data-en="Royal solitaire ring">خاتم السوليتير الملكي</h3>
             <div class="product-card__meta">
-              <span class="product-card__weight">8.2 غرام - ذهب 22 قيراط</span>
+              <span class="product-card__weight" data-en="8.2g - 22K gold">8.2 غرام - ذهب 22 قيراط</span>
             </div>
             <div class="product-card__price">285.000 د.ك</div>
           </div>
@@ -228,21 +231,21 @@
         <a href="product.html" class="product-card">
           <div class="product-card__image product-card__image--gold-2"></div>
           <div class="product-card__info">
-            <h3>قلادة السلطان الدائرية</h3>
+            <h3 data-en="Sultan medallion pendant">قلادة السلطان الدائرية</h3>
             <div class="product-card__meta">
-              <span class="product-card__weight">42.5 غرام - ذهب 22 قيراط</span>
+              <span class="product-card__weight" data-en="42.5g - 22K gold">42.5 غرام - ذهب 22 قيراط</span>
             </div>
             <div class="product-card__price">1450.000 د.ك</div>
           </div>
         </a>
         <a href="product.html" class="product-card">
           <div class="product-card__image product-card__image--gold-3">
-            <div class="product-card__badge">عليه طلب</div>
+            <div class="product-card__badge" data-en="Popular">عليه طلب</div>
           </div>
           <div class="product-card__info">
-            <h3>تعليقة اللؤلؤ العثمانية</h3>
+            <h3 data-en="Ottoman pearl pendant">تعليقة اللؤلؤ العثمانية</h3>
             <div class="product-card__meta">
-              <span class="product-card__weight">28.0 غرام - ذهب 22 قيراط</span>
+              <span class="product-card__weight" data-en="28.0g - 22K gold">28.0 غرام - ذهب 22 قيراط</span>
             </div>
             <div class="product-card__price">965.000 د.ك</div>
           </div>
@@ -250,9 +253,9 @@
         <a href="product.html" class="product-card">
           <div class="product-card__image product-card__image--gold-4"></div>
           <div class="product-card__info">
-            <h3>خاتم فيليغري عريض</h3>
+            <h3 data-en="Wide filigree ring">خاتم فيليغري عريض</h3>
             <div class="product-card__meta">
-              <span class="product-card__weight">12.4 غرام - ذهب 22 قيراط</span>
+              <span class="product-card__weight" data-en="12.4g - 22K gold">12.4 غرام - ذهب 22 قيراط</span>
             </div>
             <div class="product-card__price">420.000 د.ك</div>
           </div>
@@ -265,13 +268,13 @@
     <div class="container">
       <div class="gold-rate-card">
         <div class="gold-rate-card__left">
-          <span class="gold-rate-card__label">سعر غرام الذهب اليوم</span>
-          <div class="gold-rate-card__price">22.450 د.ك <small>للجرام - عيار 22</small></div>
-          <span class="gold-rate-card__update">آخر تحديث: 12 مايو 2026 - 10:00 صباحا</span>
+          <span class="gold-rate-card__label" data-en="Today&apos;s gold rate">سعر غرام الذهب اليوم</span>
+          <div class="gold-rate-card__price" data-en-html="KWD 22.450 <small>per gram - 22K</small>">22.450 د.ك <small>للجرام - عيار 22</small></div>
+          <span class="gold-rate-card__update" data-en="Updated: May 12, 2026 - 10:00 AM">آخر تحديث: 12 مايو 2026 - 10:00 صباحا</span>
         </div>
         <div class="gold-rate-card__right">
-          <p>السعر عندنا واضح من البداية، ومعاه وزن القطعة ووزن الذهب والعيار بشكل مرتب.</p>
-          <a href="product.html" class="btn btn--primary btn--sm">شوف صفحة المنتج</a>
+          <p data-en="Our final price is shown clearly from the start, with total weight, gold weight, and karat all laid out properly.">السعر عندنا واضح من البداية، ومعاه وزن القطعة ووزن الذهب والعيار بشكل مرتب.</p>
+          <a href="product.html" class="btn btn--primary btn--sm" data-en="See product page">شوف صفحة المنتج</a>
         </div>
       </div>
     </div>
@@ -282,11 +285,11 @@
       <div class="story-grid">
         <div class="story-image story-bg"></div>
         <div class="story-content">
-          <span class="section__label">قصتنا</span>
-          <h2 class="section__title">ثلاثة أجيال من الشغل الأصيل</h2>
-          <p>من 1962 واسم كانشوالا حاضر بالكويت عند اللي يبي شغل نظيف وذوق راقي. كل قطعة عندنا وراها شغل يد وخبرة سنين.</p>
-          <p>إحنا نحب الأمور الواضحة، عشان جذي تلقى العيار ووزن القطعة ووزن الذهب والسعر النهائي كلهم جدامك من أول نظرة.</p>
-          <a href="#" class="btn btn--outline">تعرف علينا أكثر</a>
+          <span class="section__label" data-en="Our story">قصتنا</span>
+          <h2 class="section__title" data-en="Three generations of real craft">ثلاثة أجيال من الشغل الأصيل</h2>
+          <p data-en="Since 1962, the Kanchwala name has been known in Kuwait for clean work and refined taste. Every piece here carries years of handwork and experience behind it.">من 1962 واسم كانشوالا حاضر بالكويت عند اللي يبي شغل نظيف وذوق راقي. كل قطعة عندنا وراها شغل يد وخبرة سنين.</p>
+          <p data-en="We like things to be clear, so you see the karat, piece weight, gold weight, and final price in front of you from the first look.">إحنا نحب الأمور الواضحة، عشان جذي تلقى العيار ووزن القطعة ووزن الذهب والسعر النهائي كلهم جدامك من أول نظرة.</p>
+          <a href="#" class="btn btn--outline" data-en="Learn more about us">تعرف علينا أكثر</a>
         </div>
       </div>
     </div>
@@ -299,37 +302,37 @@
           <div class="footer__logo">
             <div class="logo-mark">ك</div>
             <div class="logo-text">
-              <span class="logo-name">كانشوالا</span>
-              <span class="logo-tagline">للمجوهرات</span>
+              <span class="logo-name" data-en="Kanchwala">كانشوالا</span>
+              <span class="logo-tagline" data-en="Jewellery">للمجوهرات</span>
             </div>
           </div>
-          <p>من زمان وإحنا نخدم أهل الكويت بذوق وشغل مرتب، مع عرض واضح للسعر النهائي من غير تعقيد.</p>
+          <p data-en="We have been serving Kuwait with refined taste and tidy craftsmanship for years, with a clear final price and no unnecessary complexity.">من زمان وإحنا نخدم أهل الكويت بذوق وشغل مرتب، مع عرض واضح للسعر النهائي من غير تعقيد.</p>
         </div>
         <div class="footer__links">
-          <h4>المجموعات</h4>
-          <a href="collection.html">الخواتم</a>
-          <a href="#">القلائد</a>
-          <a href="#">الأساور</a>
-          <a href="#">الأقراط</a>
-          <a href="#">أطقم العرائس</a>
+          <h4 data-en="Collections">المجموعات</h4>
+          <a href="collection.html" data-en="Rings">الخواتم</a>
+          <a href="#" data-en="Necklaces">القلائد</a>
+          <a href="#" data-en="Bangles">الأساور</a>
+          <a href="#" data-en="Earrings">الأقراط</a>
+          <a href="#" data-en="Bridal sets">أطقم العرائس</a>
         </div>
         <div class="footer__links">
-          <h4>معلومات تهمك</h4>
-          <a href="#">من نحن</a>
-          <a href="#">سعر الذهب</a>
-          <a href="#">سياسة التوصيل</a>
-          <a href="#">سياسة الاسترجاع</a>
-          <a href="#">سياسة الخصوصية</a>
+          <h4 data-en="Helpful info">معلومات تهمك</h4>
+          <a href="#" data-en="About us">من نحن</a>
+          <a href="#" data-en="Gold rate">سعر الذهب</a>
+          <a href="#" data-en="Delivery policy">سياسة التوصيل</a>
+          <a href="#" data-en="Returns policy">سياسة الاسترجاع</a>
+          <a href="#" data-en="Privacy policy">سياسة الخصوصية</a>
         </div>
         <div class="footer__links">
-          <h4>التواصل</h4>
-          <p>المباركية، مدينة الكويت<br>الكويت</p>
+          <h4 data-en="Contact">التواصل</h4>
+          <p data-en-html="Al Mubarakiya, Kuwait City<br>Kuwait">المباركية، مدينة الكويت<br>الكويت</p>
           <p>+965 2222 3333</p>
           <p>info@kanchwala.com</p>
         </div>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 كانشوالا للمجوهرات. كل الحقوق محفوظة.</p>
+        <p data-en="© 2026 Kanchwala Jewellery. All rights reserved.">© 2026 كانشوالا للمجوهرات. كل الحقوق محفوظة.</p>
         <div class="footer__payments">
           <span>KNET</span>
           <span>Visa</span>
@@ -343,18 +346,18 @@
     <div class="cart-drawer__overlay" onclick="closeCart()"></div>
     <div class="cart-drawer__panel">
       <div class="cart-drawer__header">
-        <h3>السلة</h3>
-        <button onclick="closeCart()" class="cart-drawer__close" aria-label="إغلاق">&times;</button>
+        <h3 data-en="Your bag">السلة</h3>
+        <button onclick="closeCart()" class="cart-drawer__close" data-en-aria="Close" aria-label="إغلاق">&times;</button>
       </div>
       <div class="cart-drawer__items" id="cartItems"></div>
       <div class="cart-drawer__footer" id="cartFooter" style="display:none;">
         <div class="cart-drawer__totals">
           <div class="cart-drawer__total-row">
-            <span>المجموع الفرعي</span>
+            <span data-en="Subtotal">المجموع الفرعي</span>
             <span id="cartSubtotal">0.000 د.ك</span>
           </div>
           <div class="cart-drawer__total-row cart-drawer__total-row--grand">
-            <span>الإجمالي</span>
+            <span data-en="Total">الإجمالي</span>
             <span id="cartTotal">0.000 د.ك</span>
           </div>
         </div>
@@ -362,7 +365,7 @@
           <button class="civil-id-section__toggle" onclick="toggleCivilId()">
             <div class="civil-id-section__toggle-left">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              <span>البطاقة المدنية مطلوبة عشان نكمّل الطلب</span>
+              <span data-en="Civil ID is required to complete the order">البطاقة المدنية مطلوبة عشان نكمّل الطلب</span>
             </div>
             <div class="civil-id-section__toggle-arrow">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
@@ -370,28 +373,28 @@
           </button>
           <div class="civil-id-section__body">
             <div class="civil-id-section__inner">
-              <p class="civil-id-section__note">حسب القانون بالكويت لازم تكون عندك بطاقة مدنية سارية عشان شراء الذهب.</p>
+              <p class="civil-id-section__note" data-en="Kuwait law requires a valid Civil ID for gold purchases.">حسب القانون بالكويت لازم تكون عندك بطاقة مدنية سارية عشان شراء الذهب.</p>
               <div class="civil-id-form">
                 <div class="form-group">
-                  <label for="civilIdName">الاسم الكامل كما هو في البطاقة *</label>
-                  <input type="text" id="civilIdName" placeholder="اكتب الاسم الكامل" required>
+                  <label for="civilIdName" data-en="Full name as shown on Civil ID *">الاسم الكامل كما هو في البطاقة *</label>
+                  <input type="text" id="civilIdName" data-en-placeholder="Enter full name" placeholder="اكتب الاسم الكامل" required>
                 </div>
                 <div class="form-group">
-                  <label for="civilIdNumber">رقم البطاقة المدنية *</label>
-                  <input type="text" id="civilIdNumber" placeholder="مثال: 281234567890" maxlength="12" required>
+                  <label for="civilIdNumber" data-en="Civil ID number *">رقم البطاقة المدنية *</label>
+                  <input type="text" id="civilIdNumber" data-en-placeholder="Example: 281234567890" placeholder="مثال: 281234567890" maxlength="12" required>
                 </div>
                 <div class="form-group">
-                  <label for="civilIdPhone">رقم الهاتف *</label>
-                  <input type="tel" id="civilIdPhone" placeholder="+965 XXXX XXXX" required>
+                  <label for="civilIdPhone" data-en="Phone number *">رقم الهاتف *</label>
+                  <input type="tel" id="civilIdPhone" data-en-placeholder="+965 XXXX XXXX" placeholder="+965 XXXX XXXX" required>
                 </div>
                 <div class="form-group">
-                  <label>صورة البطاقة المدنية من الأمام والخلف *</label>
+                  <label data-en="Civil ID images, front and back *">صورة البطاقة المدنية من الأمام والخلف *</label>
                   <div class="civil-id-upload" id="civilIdUpload">
                     <input type="file" id="civilIdFile" accept="image/*" multiple onchange="handleCivilIdUpload(this)">
                     <div class="civil-id-upload__placeholder" id="civilIdPlaceholder">
                       <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-                      <span>اضغط وحط صور البطاقة المدنية</span>
-                      <small>الصورتان مطلوبة - JPG أو PNG</small>
+                      <span data-en="Tap to upload your Civil ID images">اضغط وحط صور البطاقة المدنية</span>
+                      <small data-en="Front and back are required - JPG or PNG">الصورتين مطلوبات - JPG أو PNG</small>
                     </div>
                     <div class="civil-id-upload__preview" id="civilIdPreview" style="display:none;"></div>
                   </div>
@@ -400,7 +403,7 @@
                   <label class="checkbox-label">
                     <input type="checkbox" id="civilIdConsent">
                     <span class="checkbox-custom"></span>
-                    <span class="checkbox-text">أوافق إن بيانات البطاقة المدنية تنرسل لكانشوالا عشان التحقق من الطلب حسب متطلبات القانون الكويتي، وبيتم التعامل معاها حسب <a href="#" style="color:var(--color-gold-dark);text-decoration:underline;">سياسة الخصوصية</a>.</span>
+                    <span class="checkbox-text" data-en-html="I agree to share my Civil ID details with Kanchwala for order verification as required by Kuwaiti law, and the data will be handled according to the <a href='#' style='color:var(--color-gold-dark);text-decoration:underline;'>privacy policy</a>.">أوافق إن بيانات البطاقة المدنية تنرسل لكانشوالا عشان التحقق من الطلب حسب متطلبات القانون الكويتي، وبيتم التعامل معاها حسب <a href="#" style="color:var(--color-gold-dark);text-decoration:underline;">سياسة الخصوصية</a>.</span>
                   </label>
                 </div>
               </div>
@@ -408,15 +411,15 @@
           </div>
         </div>
         <button class="btn btn--primary btn--full" id="checkoutBtn" onclick="handleCheckout()">كمّل الطلب</button>
-        <p class="cart-drawer__secure">
+        <p class="cart-drawer__secure" data-en="Secure checkout - encrypted connection">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
           دفع آمن - اتصال مشفّر
         </p>
       </div>
       <div class="cart-drawer__empty" id="cartEmpty">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#C9A96E" stroke-width="1"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
-        <p>السلة للحين فاضية</p>
-        <a href="collection.html" class="btn btn--outline btn--sm">شوف المجموعات</a>
+        <p data-en="Your bag is still empty">السلة للحين فاضية</p>
+        <a href="collection.html" class="btn btn--outline btn--sm" data-en="See collections">شوف المجموعات</a>
       </div>
     </div>
   </div>

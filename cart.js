@@ -6,6 +6,142 @@
 let cart = JSON.parse(localStorage.getItem('kanchwala_cart') || '[]');
 let civilIdFiles = [];
 
+const uiCopy = {
+  ar: {
+    currencyPrefix: '',
+    currencySuffix: ' د.ك',
+    cartWeight: 'الوزن',
+    cartGoldWeight: 'وزن الذهب',
+    cartSize: 'المقاس',
+    cartQty: 'العدد',
+    cartTotalPrice: 'السعر الإجمالي',
+    removeItem: 'شيلها',
+    uploadChange: 'غيّر الصور',
+    preparingOrder: 'دقيقة... قاعدين نجهز طلبك',
+    checkoutButton: 'كمّل الطلب',
+    alertIntro: 'نسخة تجريبية:',
+    alertCivilName: 'اسم البطاقة المدنية',
+    alertCivilNumber: 'رقم البطاقة المدنية',
+    alertPhone: 'رقم الهاتف',
+    alertImages: 'عدد الصور المرفوعة',
+    alertConsent: 'الموافقة',
+    alertYes: 'نعم',
+    alertCartTotal: 'إجمالي السلة',
+    alertCheckoutNote: 'بالمتجر الفعلي راح نوديك صفحة الدفع بعد ما نحفظ هالبيانات.',
+    langButton: 'English',
+    langAria: 'Switch to English'
+  },
+  en: {
+    currencyPrefix: 'KWD ',
+    currencySuffix: '',
+    cartWeight: 'Weight',
+    cartGoldWeight: 'Gold weight',
+    cartSize: 'Size',
+    cartQty: 'Qty',
+    cartTotalPrice: 'Total price',
+    removeItem: 'Remove',
+    uploadChange: 'Change images',
+    preparingOrder: 'One moment... preparing your order',
+    checkoutButton: 'Complete order',
+    alertIntro: 'Demo preview:',
+    alertCivilName: 'Civil ID name',
+    alertCivilNumber: 'Civil ID number',
+    alertPhone: 'Phone',
+    alertImages: 'Uploaded images',
+    alertConsent: 'Consent',
+    alertYes: 'Yes',
+    alertCartTotal: 'Cart total',
+    alertCheckoutNote: 'On the live store, this would continue to checkout after saving these details.',
+    langButton: 'العربية',
+    langAria: 'التبديل إلى العربية'
+  }
+};
+
+function getCurrentLanguage() {
+  return localStorage.getItem('kanchwala_lang') || 'ar';
+}
+
+function t(key) {
+  const lang = getCurrentLanguage();
+  return uiCopy[lang]?.[key] ?? uiCopy.ar[key] ?? key;
+}
+
+function localizedValue(value) {
+  if (value && typeof value === 'object') {
+    return value[getCurrentLanguage()] || value.ar || value.en || '';
+  }
+  return value || '';
+}
+
+function formatKWD(amount) {
+  const value = amount.toFixed(3);
+  return getCurrentLanguage() === 'en' ? `KWD ${value}` : `${value} د.ك`;
+}
+
+function applyLanguage() {
+  const lang = getCurrentLanguage();
+  const root = document.documentElement;
+  root.lang = lang;
+  root.dir = lang === 'en' ? 'ltr' : 'rtl';
+
+  document.querySelectorAll('[data-en]').forEach(el => {
+    if (!el.hasAttribute('data-ar')) {
+      el.setAttribute('data-ar', el.textContent);
+    }
+    el.textContent = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-ar');
+  });
+
+  document.querySelectorAll('[data-en-html]').forEach(el => {
+    if (!el.hasAttribute('data-ar-html')) {
+      el.setAttribute('data-ar-html', el.innerHTML);
+    }
+    el.innerHTML = lang === 'en' ? el.getAttribute('data-en-html') : el.getAttribute('data-ar-html');
+  });
+
+  document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+    if (!el.hasAttribute('data-ar-placeholder')) {
+      el.setAttribute('data-ar-placeholder', el.getAttribute('placeholder') || '');
+    }
+    el.setAttribute('placeholder', lang === 'en' ? el.getAttribute('data-en-placeholder') : el.getAttribute('data-ar-placeholder'));
+  });
+
+  document.querySelectorAll('[data-en-aria]').forEach(el => {
+    if (!el.hasAttribute('data-ar-aria')) {
+      el.setAttribute('data-ar-aria', el.getAttribute('aria-label') || '');
+    }
+    el.setAttribute('aria-label', lang === 'en' ? el.getAttribute('data-en-aria') : el.getAttribute('data-ar-aria'));
+  });
+
+  document.querySelectorAll('[data-en-title]').forEach(el => {
+    if (!el.hasAttribute('data-ar-title')) {
+      el.setAttribute('data-ar-title', el.textContent);
+    }
+    el.textContent = lang === 'en' ? el.getAttribute('data-en-title') : el.getAttribute('data-ar-title');
+  });
+
+  document.querySelectorAll('[data-lang-toggle]').forEach(el => {
+    el.textContent = t('langButton');
+    el.setAttribute('aria-label', t('langAria'));
+  });
+
+  const uploadChange = document.querySelector('.upload-change');
+  if (uploadChange) uploadChange.textContent = t('uploadChange');
+
+  const checkoutBtn = document.getElementById('checkoutBtn');
+  if (checkoutBtn && checkoutBtn.style.pointerEvents !== 'none') {
+    checkoutBtn.textContent = t('checkoutButton');
+  }
+}
+
+function toggleLanguage() {
+  const next = getCurrentLanguage() === 'ar' ? 'en' : 'ar';
+  localStorage.setItem('kanchwala_lang', next);
+  applyLanguage();
+  renderCart();
+}
+
+window.toggleLanguage = toggleLanguage;
+
 function saveCart() {
   localStorage.setItem('kanchwala_cart', JSON.stringify(cart));
 }
@@ -16,10 +152,6 @@ function updateCartCount() {
     el.textContent = count;
     el.style.display = count > 0 ? 'flex' : 'none';
   });
-}
-
-function formatKWD(amount) {
-  return amount.toFixed(3) + ' د.ك';
 }
 
 const colorClasses = [
@@ -55,19 +187,23 @@ function renderCart() {
     const itemTotal = item.price * item.qty;
     subtotal += itemTotal;
     const bgClass = item.colorClass || colorClasses[index % colorClasses.length];
-    const sizeText = item.size ? `&bull; المقاس ${item.size}` : '';
-    const goldWeightText = item.goldWeight ? `&bull; وزن الذهب ${item.goldWeight}` : '';
+    const itemName = item.names ? (item.names[getCurrentLanguage()] || item.names.ar || item.name) : item.name;
+    const itemKarat = item.karatLabels ? (item.karatLabels[getCurrentLanguage()] || item.karat) : item.karat;
+    const itemWeight = localizedValue(item.weight);
+    const itemGoldWeight = localizedValue(item.goldWeight);
+    const sizeText = item.size ? `&bull; ${t('cartSize')} ${item.size}` : '';
+    const goldWeightText = itemGoldWeight ? `&bull; ${t('cartGoldWeight')} ${itemGoldWeight}` : '';
 
     html += `
       <div class="cart-item">
         <div class="cart-item__image ${bgClass}"></div>
         <div class="cart-item__details">
-          <div class="cart-item__name">${item.name}</div>
-          <div class="cart-item__meta">الوزن ${item.weight} ${goldWeightText} &bull; ${item.karat} ${sizeText} &bull; العدد: ${item.qty}</div>
+          <div class="cart-item__name">${itemName}</div>
+          <div class="cart-item__meta">${t('cartWeight')} ${itemWeight} ${goldWeightText} &bull; ${itemKarat} ${sizeText} &bull; ${t('cartQty')}: ${item.qty}</div>
           <div class="cart-item__pricing">
-            <strong>السعر الإجمالي: ${formatKWD(itemTotal)}</strong>
+            <strong>${t('cartTotalPrice')}: ${formatKWD(itemTotal)}</strong>
           </div>
-          <button class="cart-item__remove" onclick="removeFromCart(${index})">شيلها</button>
+          <button class="cart-item__remove" onclick="removeFromCart(${index})">${t('removeItem')}</button>
         </div>
       </div>
     `;
@@ -157,7 +293,7 @@ function handleCivilIdUpload(input) {
 
     const changeText = document.createElement('span');
     changeText.className = 'upload-change';
-    changeText.textContent = 'غيّر الصور';
+    changeText.textContent = t('uploadChange');
     preview.appendChild(changeText);
   }
 }
@@ -230,25 +366,25 @@ function handleCheckout() {
 
   const btn = document.getElementById('checkoutBtn');
   if (btn) {
-    btn.textContent = 'دقيقة... قاعدين نجهز طلبك';
+    btn.textContent = t('preparingOrder');
     btn.style.opacity = '0.7';
     btn.style.pointerEvents = 'none';
   }
 
   setTimeout(() => {
     alert(
-      'نسخة تجريبية:\n\n' +
-      'اسم البطاقة المدنية: ' + civilData.name + '\n' +
-      'رقم البطاقة المدنية: ' + civilData.number + '\n' +
-      'رقم الهاتف: ' + civilData.phone + '\n' +
-      'عدد الصور المرفوعة: ' + civilData.imagesCount + '\n' +
-      'الموافقة: نعم\n\n' +
-      'إجمالي السلة: ' + formatKWD(cart.reduce((sum, item) => sum + item.price * item.qty, 0)) + '\n\n' +
-      'بالمتجر الفعلي راح نوديك صفحة الدفع بعد ما نحفظ هالبيانات.'
+      `${t('alertIntro')}\n\n` +
+      `${t('alertCivilName')}: ${civilData.name}\n` +
+      `${t('alertCivilNumber')}: ${civilData.number}\n` +
+      `${t('alertPhone')}: ${civilData.phone}\n` +
+      `${t('alertImages')}: ${civilData.imagesCount}\n` +
+      `${t('alertConsent')}: ${t('alertYes')}\n\n` +
+      `${t('alertCartTotal')}: ${formatKWD(cart.reduce((sum, item) => sum + item.price * item.qty, 0))}\n\n` +
+      t('alertCheckoutNote')
     );
 
     if (btn) {
-      btn.textContent = 'كمّل الطلب';
+      btn.textContent = t('checkoutButton');
       btn.style.opacity = '1';
       btn.style.pointerEvents = 'auto';
     }
@@ -281,6 +417,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+  applyLanguage();
   renderCart();
   updateCartCount();
 });
